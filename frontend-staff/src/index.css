@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* 1. Global Custom Cursor & Base Styles */
 @layer base {
   body {
     margin: 0;
@@ -7,10 +8,43 @@
     background-color: #020617; /* slate-950 */
     color: #f8fafc; /* slate-50 */
     font-family: ui-sans-serif, system-ui, sans-serif;
-    cursor: none;
+    cursor: none !important;
   }
 
-  * {
-    cursor: none;
+  /* Force hide system cursor globally for all interactive elements */
+  *,
+  button,
+  input,
+  select,
+  textarea,
+  a {
+    cursor: none !important;
   }
+}
+
+/* 2. Custom Text Selection Glow Effect */
+::selection {
+  background-color: rgba(6, 182, 212, 0.3);
+  color: #06b6d4;
+}
+
+/* 3. Reusable Custom Input Component Styles */
+.input {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(51 65 85 / 0.8); /* slate-700 */
+  background: rgb(2 6 23 / 0.6); /* slate-950/60 */
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: rgb(226 232 240); /* slate-200 */
+  outline: none;
+  transition: border-color 150ms ease;
+}
+
+.input::placeholder {
+  color: rgb(100 116 139); /* slate-500 */
+}
+
+.input:focus {
+  border-color: rgb(6 182 212); /* cyan-500 */
 }
