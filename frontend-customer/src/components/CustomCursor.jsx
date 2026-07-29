@@ -31,33 +31,34 @@ const CustomCursor = () => {
       <div 
         style={{
           position: 'fixed',
-          top: 0,
-          left: 0,
+          left: `${cursorPos.x}px`,
+          top: `${cursorPos.y}px`,
           width: '8px',
           height: '8px',
           backgroundColor: '#00d2ff',
           borderRadius: '50%',
           pointerEvents: 'none',
-          transform: `translate3d(${cursorPos.x - 4}px, ${cursorPos.y - 4}px, 0)`,
+          transform: 'translate(-50%, -50%)',
           boxShadow: '0 0 10px #00d2ff, 0 0 15px #00d2ff',
-          transition: 'transform 0.02s linear'
+          willChange: 'left, top'
         }}
       />
       
-      {/* Outer Concentric Glow Ring */}
+      {/* Outer Concentric Glow Ring (Perfectly Centered) */}
       <div 
         style={{
           position: 'fixed',
-          top: 0,
-          left: 0,
+          left: `${cursorPos.x}px`,
+          top: `${cursorPos.y}px`,
           width: '38px',
           height: '38px',
           border: '1.5px solid rgba(0, 210, 255, 0.7)',
           background: 'radial-gradient(circle, rgba(0, 210, 255, 0.15) 0%, rgba(0, 0, 0, 0) 70%)',
           borderRadius: '50%',
           pointerEvents: 'none',
-          transform: `translate3d(${cursorPos.x - 19}px, ${cursorPos.y - 19}px, 0)`,
-          transition: 'transform 0.08s ease-out'
+          transform: 'translate(-50%, -50%)',
+          transition: 'left 0.06s ease-out, top 0.06s ease-out',
+          willChange: 'left, top'
         }}
       />
     </div>

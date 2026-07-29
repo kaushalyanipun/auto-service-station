@@ -7,16 +7,32 @@ import LiveTrackerView from './components/LiveTrackerView.jsx';
 import AppointmentBooking from './components/AppointmentBooking.jsx';
 import ServiceEstimatorView from './components/ServiceEstimatorView.jsx';
 import ServiceHistoryView from './components/ServiceHistoryView.jsx';
-import FeedbackView from './components/FeedbackView.jsx'; // 👈 Feedback Component එක Import කරගන්න
+import FeedbackView from './components/FeedbackView.jsx';
 import CustomCursor from './components/CustomCursor.jsx';
 
 function App() {
   const [activeTab, setActiveTab] = useState('liveTracker');
 
+  // Logout Trigger Function
+  const handleLogout = () => {
+    if (window.confirm("ඔබට Dashboard එකෙන් Logout වීමට අවශ්‍යද?")) {
+      // මෙතැනට Login view එකට Switch වන Logic එක යෙදිය හැක
+      console.log("User Logged Out");
+      alert("Logged out successfully!");
+    }
+  };
+
   return (
     <div className="app-layout">
-      {/* Left Sidebar Navigation */}
-      <CustomerHeader activeTab={activeTab} setActiveTab={setActiveTab} />
+      {/* Glow Cursor Component */}
+      <CustomCursor />
+
+      {/* Left Sidebar Navigation with Logout prop */}
+      <CustomerHeader 
+        activeTab={activeTab} 
+        setActiveTab={setActiveTab} 
+        onLogout={handleLogout} 
+      />
 
       {/* Main Content Area */}
       <main className="main-content">
@@ -24,7 +40,7 @@ function App() {
         {activeTab === 'appointment' && <AppointmentBooking />}
         {activeTab === 'estimator' && <ServiceEstimatorView />}
         {activeTab === 'history' && <ServiceHistoryView />}
-        {activeTab === 'feedback' && <FeedbackView />} {/* 👈 Active Tab එක එකතු කරන්න */}
+        {activeTab === 'feedback' && <FeedbackView />}
       </main>
     </div>
   );
