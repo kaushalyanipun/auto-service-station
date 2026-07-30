@@ -1,12 +1,28 @@
 {
+<<<<<<< HEAD
+  "name": "auto-service-backend",
+  "version": "1.0.0",
+  "type": "module",
+=======
   "name": "backend",
   "version": "1.0.0",
+>>>>>>> 8ea19ba44b640e527729cb8d641032d6b9f3a928
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
+=======
     "cors": "^2.8.6",
     "dotenv": "^16.6.1",
     "express": "^4.22.2",
@@ -16,3 +32,4 @@
     "socket.io": "^4.8.3"
   }
 }
+>>>>>>> 8ea19ba44b640e527729cb8d641032d6b9f3a928
