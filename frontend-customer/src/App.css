@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #040718 !important;
+  color: #ffffff;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -181,4 +195,50 @@
     right: 0;
     border-right-color: var(--border);
   }
+}
+/* ==========================================
+   CYAN NEON RING MOUSE TRAIL (LARGER SIZE)
+   ========================================== */
+.cyan-glow-circle {
+  position: fixed;
+  border-radius: 50%;
+  border: 2.5px solid #00f2fe; 
+  background: rgba(0, 242, 254, 0.12);
+  box-shadow: 
+    0 0 12px #00f2fe,
+    0 0 25px rgba(0, 242, 254, 0.7),
+    inset 0 0 8px #00f2fe;
+  transform: translate(-50%, -50%);
+  animation: cyanFade 0.55s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes cyanFade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+}
+/* ==========================================
+   BOOKING TITLE GLOWING CYAN STYLE
+   ========================================== */
+.booking-title {
+  color: #00d2ff;
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Neon Cyan Glow Effect */
+  text-shadow: 
+    0 0 10px rgba(0, 242, 254, 0.6),
+    0 0 20px rgba(0, 242, 254, 0.4),
+    0 0 30px rgba(0, 242, 254, 0.2);
+
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: 2px;
 }

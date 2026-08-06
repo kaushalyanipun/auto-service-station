@@ -1,0 +1,234 @@
+.kiosk-page-container {
+  min-height: 100vh;
+  background-color: #040718;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.kiosk-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.badge {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.kiosk-header h2 {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.plate-display {
+  margin-bottom: 1.5rem;
+}
+
+.plate-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 0.4rem;
+}
+
+.plate-box {
+  background: #facc15;
+  color: #000000;
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  border: 3px solid #000000;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.details-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row span {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.detail-row strong {
+  color: #f8fafc;
+  font-size: 0.95rem;
+}
+
+.prompt-text {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin-bottom: 1.2rem;
+}
+
+.btn-confirm {
+  width: 100%;
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.btn-confirm:hover {
+  background: linear-gradient(135deg, #15803d, #166534);
+  transform: translateY(-1px);
+}
+
+.check-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(74, 222, 128, 0.2);
+  color: #4ade80;
+  border: 2px solid #4ade80;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 1rem auto;
+}
+
+.confirmation-success h3 {
+  color: #4ade80;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.sub-text {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+/* ==========================================
+   BUTTON GROUP & SUCCESS SCREEN STYLES
+   ========================================== */
+
+/* Button Group Style */
+.kiosk-button-group {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Success Check-mark Box */
+.confirmation-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.check-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(22, 163, 74, 0.2);
+  border: 2px solid #16a34a;
+  color: #22c55e;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.confirmation-success h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.confirmation-success p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.confirmation-success .sub-text {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+/* Neon Cyan Glowing Title Style */
+.neon-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.neon-text {
+  color: #00f0ff;
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  /* Neon Glow Effects */
+  text-shadow: 
+    0 0 5px #00f0ff,
+    0 0 10px #00f0ff,
+    0 0 20px rgba(0, 240, 255, 0.6),
+    0 0 35px rgba(0, 240, 255, 0.4);
+}

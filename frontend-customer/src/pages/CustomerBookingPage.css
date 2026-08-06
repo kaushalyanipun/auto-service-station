@@ -1,0 +1,488 @@
+/* ==========================================
+   PRIMARY BUTTON (Book Appointment)
+   ========================================== */
+.btn-primary {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff; 
+  
+  /* Dark Metallic Cyan Gradient */
+  background: linear-gradient(135deg, #0f3952 0%, #086b9c 50%, #0093d6 100%);
+  border: 1px solid #00f2fe;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  /* Subtle Metallic Cyan Glow */
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.4),
+    0 0 10px rgba(0, 242, 254, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #134868 0%, #0a82bd 50%, #00b4d8 100%);
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.6),
+    0 0 18px rgba(0, 242, 254, 0.5);
+  border-color: #4facfe;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 242, 254, 0.3);
+}
+
+/* ==========================================
+   SECONDARY BUTTON (Book Another Appointment)
+   ========================================== */
+.btn-secondary {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #00f2fe; /* Glowing Cyan Text */
+  
+  /* Glassy Dark Background */
+  background: linear-gradient(135deg, rgba(15, 57, 82, 0.6) 0%, rgba(8, 107, 156, 0.6) 100%);
+  border: 1px solid #00f2fe;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.4),
+    0 0 10px rgba(0, 242, 254, 0.2);
+    
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background: linear-gradient(135deg, #0f3952 0%, #086b9c 100%);
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.6),
+    0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(0, 242, 254, 0.3);
+}
+.booking-page-container {
+  min-height: 100vh;
+  background-color: #040718;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.booking-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #60a5fa;
+  text-align: center;
+}
+
+.page-subtitle {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3b82f6;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.form-group select option {
+  background-color: #040718;
+  color: #ffffff;
+}
+
+.btn-primary {
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e40af);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.success-message {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.success-message h3 {
+  color: #4ade80;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.summary-box {
+  background: rgba(13, 22, 40, 0.6); 
+  border: 1px solid #00f2fe; 
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+  
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.15),
+              inset 0 0 15px rgba(0, 242, 254, 0.05);
+              
+  text-align: left;
+}
+
+/* Inside text styling */
+.summary-box p {
+  color: #e0e0e0;
+  margin: 10px 0;
+  font-size: 0.98rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-box p span {
+  color: #00d2ff; 
+  font-weight: 600;
+}
+/* ==========================================
+   ANIMATED TITLE & MOVING CAR
+   ========================================== */
+.animated-booking-title {
+  color: #00d2ff;
+  -webkit-background-clip: text;
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  position: relative; /* Container for relative positioning */
+  padding: 0 10px;
+}
+
+/* Common text-shadow for both words and character popups */
+.animated-booking-title .word, 
+.animated-booking-title .char {
+  text-shadow: 
+    0 0 10px rgba(0, 242, 254, 0.6),
+    0 0 20px rgba(0, 242, 254, 0.4);
+}
+
+/* Single character styling for popup */
+.animated-booking-title .word .char {
+  display: inline-block; /* Essential for transform animation */
+  animation: charPopUp 5s ease-in-out infinite;
+  animation-delay: calc(var(--char-index) * 0.1s); /* Sequence popup based on index */
+}
+
+/* 🚗 Car Animation Container */
+.animated-car-container {
+  position: relative;
+  height: 38px;
+  width: 38px; /* Maintain fixed space for car */
+  overflow: visible; /* Let car move outside its box */
+}
+
+/* Moving Car Icon Styling */
+.moving-car {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(0 0 8px #00f2fe);
+  animation: moveCarAcrossTitle 5s ease-in-out infinite;
+}
+
+/* ==========================================
+   FORCE REMOVE CYAN HIGHLIGHT BOX & FIX TEXT
+   ========================================== */
+.booking-title-clean {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+  
+  
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  
+  font-style: italic !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  margin-bottom: 15px !important;
+  width: 100% !important;
+}
+
+/* Glowing Cyan Text */
+.booking-title-clean .title-text {
+  color: #00f2fe !important;
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  text-shadow: 
+    0 0 10px rgba(0, 242, 254, 0.7),
+    0 0 20px rgba(0, 242, 254, 0.4) !important;
+  white-space: nowrap !important;
+}
+
+/* 🚗 Moving Car Animation Container */
+.booking-title-clean .car-track {
+  position: relative;
+  width: 40px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.booking-title-clean .moving-car {
+  filter: drop-shadow(0 0 8px #00f2fe);
+  animation: smoothCarDrive 3s ease-in-out infinite alternate;
+}
+
+@keyframes smoothCarDrive {
+  0% {
+    transform: translateX(-15px) scaleX(1);
+  }
+  50% {
+    transform: translateX(15px) scaleX(1);
+  }
+  51% {
+    transform: translateX(15px) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-15px) scaleX(-1);
+  }
+}
+/* 🛠️ Phone Input Alignment Fix */
+.phone-input-container {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.country-select {
+  width: 110px !important;
+  min-width: 110px !important;
+  padding: 10px 4px;
+  background: #0d1628;
+  color: #00f2fe;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.phone-number-input {
+  flex: 1 !important;
+  min-width: 0 !important; 
+  box-sizing: border-box;
+}
+
+.country-hint {
+  color: #64748b;
+  font-size: 0.72rem;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Ensure inputs don't spill over card boundaries */
+.form-row {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 0; /* Prevents flex children from stretching outside container */
+}
+
+.form-group input, 
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+}
+/* 📦 Fuel Type Container Box */
+.fuel-type-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #0f172a; 
+  border: 1px solid #1e293b;   
+  border-radius: 10px;        
+  padding: 10px 14px;
+  margin-top: 6px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+/* Form hover / focus  glowing blue border  */
+.fuel-type-box:hover {
+  border-color: #3b82f6;
+}
+
+/* 🔘 Individual Options (Horizontal Layout) */
+.fuel-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cbd5e1;
+  font-size: 0.88rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.fuel-option:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Radio button style */
+.fuel-option input[type="radio"] {
+  accent-color: #b60808;
+  cursor: pointer;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+/* Select  Option  Highlight  */
+.fuel-option.active {
+  color: #03d8ec;
+  font-weight: 600;
+}
+/* 📞 Phone Input Flex Container */
+.phone-input-container {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+  width: 100%;
+}
+
+/* 🌐 Country Select Box */
+.country-select {
+  flex: 0 0 120px;
+  background-color: #0d1628;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  color: #00f2fe;
+  font-weight: 600;
+  padding: 10px 8px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.country-select:focus {
+  border-color: #00f2fe;
+}
+
+/* 📱 Phone Number Text Field */
+.phone-number-input {
+  flex: 1;
+  background-color: #0d1628;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.phone-number-input:focus {
+  border-color: #00f2fe;
+}
+
+/* 💡 Hint Text */
+.country-hint {
+  display: block;
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 6px;
+}
